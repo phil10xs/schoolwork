@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:schoolwork/schoolchoose.dart';
+import 'package:schoolwork/childdevelop/schoolchoose.dart';
 
 class School extends StatefulWidget {
   final String schoolID;

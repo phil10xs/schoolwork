@@ -1,9 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:schoolwork/childdevelop/schoolchoose.dart';
+import 'package:schoolwork/childdevelop/schooldevtimeline.dart';
+import 'package:schoolwork/childdevelop/schoolpersonal.dart';
+import 'package:schoolwork/eduprogress/eduprogress.dart';
+import 'package:schoolwork/eduprogress/weekly.dart';
+import 'package:schoolwork/eduprogress/weeklyoverview.dart';
+import 'package:schoolwork/eduprogress/weeklyproadd.dart';
 import 'package:schoolwork/placeholder_widget.dart';
-import 'package:schoolwork/school.dart';
-import 'package:schoolwork/schoolchoose.dart';
-import 'package:schoolwork/schooldevtimeline.dart';
-import 'package:schoolwork/schoolpersonal.dart';
+
+import 'eduprogress/draggable.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _children = [
     PlaceholderWidget(Conversations()),
     PlaceholderWidget(Home()),
-    PlaceholderWidget(SchoolDevTimeline()),
+    PlaceholderWidget(WeeklyProadd()),
     PlaceholderWidget(Profile()),
   ];
 
@@ -48,6 +54,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: _currentIndex == 3
+          ? FloatingActionButton(
+              backgroundColor: Colors.red,
+              child: Icon(Icons.add, size: 30),
+              onPressed: () {},
+            )
+          : null,
       backgroundColor: Color(0xFF9C9ED2),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -112,6 +125,32 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+// Future showCreatePlanModal() {
+//   if (platform() == SystemPlatform.apple)
+//     return showCupertinoModalPopup(
+//       context: context,
+//       useRootNavigator: true,
+//       semanticsDismissible: false,
+//       builder: (BuildContext ctx) {
+//         return Container();
+//       },
+//     );
+//   return showModalBottomSheet(
+//     shape: RoundedRectangleBorder(
+//       borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+//     ),
+//     enableDrag: false,
+//     isDismissible: false,
+//     useRootNavigator: true,
+//     isScrollControlled: true,
+//     backgroundColor: Colors.transparent,
+//     barrierColor: Colors.black45,
+//     builder: (BuildContext ctx) {
+//       return Container();
+//     },
+//   );
+// }
 
 class Conversations extends StatefulWidget {
   @override

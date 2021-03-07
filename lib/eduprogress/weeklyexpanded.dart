@@ -1,39 +1,12 @@
 import 'package:configurable_expansion_tile/configurable_expansion_tile.dart';
 import 'package:flutter/material.dart';
-import 'package:schoolwork/schoolchoose.dart';
 
-// ignore: unused_element
-class ExpandableListView extends StatefulWidget {
-  final String title;
-
-  const ExpandableListView({Key key, this.title}) : super(key: key);
-
+class WeeklyExpandableList extends StatefulWidget {
   @override
-  ExpandableListViewState createState() => ExpandableListViewState();
+  _WeeklyExpandableListState createState() => _WeeklyExpandableListState();
 }
 
-class ExpandableListViewState extends State<ExpandableListView> {
-  bool expandFlag = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-        shrinkWrap: true,
-        itemCount: children.length,
-        itemBuilder: (context, i) {
-          return SingleChildScrollView(
-            child: Flexible(child: ExpandedList()),
-          );
-        });
-  }
-}
-
-class ExpandedList extends StatefulWidget {
-  @override
-  _ExpandedListState createState() => _ExpandedListState();
-}
-
-class _ExpandedListState extends State<ExpandedList> {
+class _WeeklyExpandableListState extends State<WeeklyExpandableList> {
   int index;
   get i => children[index];
 

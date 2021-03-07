@@ -1,7 +1,7 @@
 import 'package:configurable_expansion_tile/configurable_expansion_tile.dart';
 import 'package:flutter/material.dart';
-import 'package:schoolwork/schoolchildlist.dart';
-import 'package:schoolwork/ticker.dart';
+import 'package:schoolwork/childdevelop/schoolchildlist.dart';
+import 'package:schoolwork/childdevelop/ticker.dart';
 
 class SchoolPersonal extends StatefulWidget {
   @override
@@ -296,7 +296,7 @@ class _SchoolPersonalState extends State<SchoolPersonal> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(child: ScreenProgress(ticks: 2)),
+                ScreenProgress(ticks: 3),
               ],
             ),
             Row(

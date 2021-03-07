@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:schoolwork/classlist.dart';
-import 'package:schoolwork/schoolchildlist.dart';
-import 'package:configurable_expansion_tile/configurable_expansion_tile.dart';
+import 'package:schoolwork/childdevelop/classlist.dart';
+import 'package:schoolwork/childdevelop/schoolchildlist.dart';
 
 class SchoolChoose extends StatefulWidget {
   @override
@@ -56,7 +55,7 @@ class _SchoolChooseState extends State<SchoolChoose> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: 30),
+                  SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -71,11 +70,12 @@ class _SchoolChooseState extends State<SchoolChoose> {
                       ),
                     ],
                   ),
+                  SizedBox(height: 10),
+                  ClassList(),
+                  ExpandableListView(),
                   SizedBox(
                     height: 12,
                   ),
-                  ClassList(),
-                  ExpandableListView(),
                 ],
               ),
             ),

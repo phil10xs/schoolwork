@@ -1,12 +1,8 @@
 import 'package:configurable_expansion_tile/configurable_expansion_tile.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:schoolwork/schoolchildlist.dart';
-import 'package:schoolwork/schoolpersonal.dart';
-import 'package:timeline_tile/timeline_tile.dart';
-import 'package:weather_icons/weather_icons.dart';
+import 'package:schoolwork/childdevelop/schoolchildlist.dart';
 
-import 'ticker.dart';
+import 'package:timeline_tile/timeline_tile.dart';
 
 class SchoolDevTimeline extends StatefulWidget {
   @override
@@ -523,13 +519,8 @@ class _PhysiExpandedListState extends State<PhysiExpandedList> {
                 height: 70,
                 margin: EdgeInsets.only(bottom: 02),
                 decoration: BoxDecoration(
-                  color: Color(0xFFF25775),
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10),
-                      bottomLeft: Radius.circular(10),
-                      bottomRight: Radius.circular(10)),
-                ),
+                    color: Color(0xFFF25775),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
                 padding: EdgeInsets.all(10),
                 child: Row(
                   children: [

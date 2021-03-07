@@ -7,17 +7,19 @@ class ScreenProgress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        children: <Widget>[
-          tick1(),
-          line1(),
-          tick2(),
-          line2(),
-          tick3(),
-          line3(),
-          tick4(),
-        ],
+    return SingleChildScrollView(
+      child: Container(
+        child: Row(
+          children: <Widget>[
+            tick1(),
+            line1(),
+            tick2(),
+            line2(),
+            tick3(),
+            line3(),
+            tick4(),
+          ],
+        ),
       ),
     );
   }
@@ -27,13 +29,15 @@ class ScreenProgress extends StatelessWidget {
         ? GestureDetector(
             onTap: () {
               print('tapped');
+
               return Icon(
                 Icons.check_circle,
                 color: Colors.blue,
               );
             },
+            // child: Radio(value: null, groupValue: null, onChanged: null)
             child: Icon(
-              Icons.check_circle,
+              Icons.radio_button_checked,
               color: Colors.blue,
             ),
           )
@@ -45,6 +49,7 @@ class ScreenProgress extends StatelessWidget {
                 color: Colors.blue,
               );
             },
+            // child: Radio(value: null, groupValue: null, onChanged: null)
             child: Icon(
               Icons.radio_button_unchecked,
               color: Colors.blue,
@@ -85,12 +90,12 @@ class ScreenProgress extends StatelessWidget {
         ? Container(
             color: Colors.blue,
             height: 6.0,
-            width: 90.0,
+            width: 75.0,
           )
         : Container(
             color: Colors.white,
             height: 6.0,
-            width: 90.0,
+            width: 75.0,
           );
   }
 }
