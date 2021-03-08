@@ -153,7 +153,6 @@ class _WeeklyOverviewState extends State<WeeklyOverview> {
           PersonalExpandedList(),
         ],
       ),
-      // ),
     );
   }
 }

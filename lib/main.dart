@@ -10,6 +10,7 @@ import 'package:schoolwork/eduprogress/weeklyproadd.dart';
 import 'package:schoolwork/placeholder_widget.dart';
 
 import 'eduprogress/draggable.dart';
+import 'eduprogress/weeklychart.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,10 +40,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    PlaceholderWidget(Conversations()),
-    PlaceholderWidget(Home()),
+    PlaceholderWidget(WeeklyProgress()),
+    PlaceholderWidget(WeeklyOverview()),
     PlaceholderWidget(WeeklyProadd()),
-    PlaceholderWidget(Profile()),
+    PlaceholderWidget(WeeklyChart()),
   ];
 
   void onTabTapped(int index) {
